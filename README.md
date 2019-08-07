@@ -27,3 +27,12 @@ dataSaver.add({
     , 'bananass': 10324
 
 })
+
+# collect all data in an internal array dataSaver.cacheArray
+dataSaver.cache({....})
+
+# Save the data collected by cache to file and empty cache
+dataSaver.dumpCache()
+
+
+```

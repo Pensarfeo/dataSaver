@@ -7,10 +7,12 @@ class DataSaver:
         self.titles = None
         self.divider = divider
         self.filename = filename + '.csv'
-
+        self.cacheArray = []
         self.dir = os.path.dirname(self.filename)
-        if not  os.path.isdir(self.dir):
+        if not os.path.isdir(self.dir):
             os.makedirs(self.dir)
+        
+        # do something to import first line of file and check the matching with the keys given
 
     def writeTitles(self, *titles):
         if not os.path.isfile(self.filename):        
@@ -31,6 +33,16 @@ class DataSaver:
             row.append(strValue)
 
         return self.divider.join(row)
+
+    # save to a tem cache object
+    def cache(self, data):
+        self.cacheArray.append(data)
+
+    #  save printed data to file
+    def dumpCache(self):
+        for d in self.cacheArray():
+            self.add(d)
+        self.cacheArray = []
 
     def add(self, data):
         # import pdb; pdb.set_trace()
