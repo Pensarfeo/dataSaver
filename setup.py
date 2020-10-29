@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name = "dataSaver",
-    version = "0.0.2",
+    version = "0.0.3",
     author = "Pedro A. Favuzzi",
     author_email = "pa.favuzzi@gmail.com",
     description = "Utility to save data to cvs as an easy (and very basic) to read and use alternative to tensorboard",

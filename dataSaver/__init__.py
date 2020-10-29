@@ -40,7 +40,7 @@ class DataSaver:
 
     #  save printed data to file
     def dumpCache(self):
-        for d in self.cacheArray():
+        for d in self.cacheArray:
             self.add(d)
         self.cacheArray = []
 
